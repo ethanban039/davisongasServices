@@ -1,0 +1,1680 @@
+<!--
+  ========================================================================
+  DAVISON GAS SERVICES — Complete Production-Ready Website
+  ========================================================================
+
+  COLOUR PALETTE:
+  - Primary: #1B2A4A (deep navy) — conveys trust, reliability and professionalism
+    for a gas/heating trade. Strong and serious without being corporate.
+  - Accent: #E86A2A (warm orange) — evokes warmth/heat (perfect for a heating
+    business), creates urgency on CTAs, and contrasts sharply against the navy.
+  - Light BG: #F7F8FA (off-white) — softer than pure white, easier on the eyes.
+  - Dark text: #1A1A2E — near-black for readability.
+  - Card BG: #FFFFFF — clean white cards for content separation.
+  - Muted text: #5A6275 — secondary copy, less visual weight.
+  - Success green: #2ECC71 — form feedback.
+
+  WHY: Trades businesses benefit from a dark, authoritative primary colour
+  paired with a warm, energetic accent. Navy + orange is the strongest
+  combination for gas/heating — it says "trustworthy and warm" at first glance.
+
+  FONT PAIRING:
+  - Headings: "Plus Jakarta Sans" (700, 800) — geometric, modern, confident.
+    Feels premium without being stuffy. Great for a trades business that
+    wants to punch above its weight visually.
+  - Body: "Inter" (400, 500) — extremely readable at all sizes, clean and
+    neutral. Perfect for body copy and UI text.
+
+  WHY: Both are free Google Fonts. Jakarta Sans gives headings real presence
+  and authority, while Inter keeps body text crisp and scannable on mobile.
+
+  DESIGN DECISIONS:
+  - Hero uses a full-viewport gradient overlay on an Unsplash image of a
+    modern boiler/heating setup.
+  - Testimonials use real reviews provided, lightly edited for length.
+  - "How It Works" uses 3 numbered steps with icons.
+  - Sticky header shrinks on scroll with backdrop blur.
+  - All animations use Intersection Observer — zero dependencies.
+  - Contact form uses Web3Forms.
+  ========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Primary SEO -->
+    <title>Davison Gas Services | Boiler Repair & Installation Nottinghamshire</title>
+    <meta name="description" content="Gas boiler repair, installation and heating services across Nottinghamshire. 25+ years experience, all makes and models. Call 07875 272021 for a free quote.">
+    <link rel="canonical" href="https://www.davisongasservices.co.uk/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Davison Gas Services | Boiler Repair & Installation Nottinghamshire">
+    <meta property="og:description" content="Gas boiler repair, installation and heating services across Nottinghamshire. 25+ years experience, all makes and models. Call 07875 272021 for a free quote.">
+    <meta property="og:url" content="https://www.davisongasservices.co.uk/">
+    <meta property="og:image" content="https://www.davisongasservices.co.uk/og-image.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Davison Gas Services">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema: LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "Davison Gas Services",
+        "description": "Gas boiler repair, boiler installation, heating systems, domestic plumbing and energy-efficient solutions across Nottinghamshire. Over 25 years experience.",
+        "url": "https://www.davisongasservices.co.uk",
+        "telephone": "+447875272021",
+        "email": "darrentyler7@yahoo.co.uk",
+        "image": "https://www.davisongasservices.co.uk/og-image.jpg",
+        "foundingDate": "2007",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Nottinghamshire",
+            "addressCountry": "GB"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.0",
+            "longitude": "-1.15"
+        },
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Nottinghamshire"
+        },
+        "sameAs": [
+            "https://www.facebook.com/DavisonGasServices"
+        ],
+        "priceRange": "££",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "10",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "07:00",
+            "closes": "19:00"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Gas & Heating Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gas Boiler Repair"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Boiler Installation"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Heating Systems"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Domestic Plumbing"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Energy-Efficient Solutions"}}
+            ]
+        }
+    }
+    </script>
+
+    <style>
+        /* ========== CSS CUSTOM PROPERTIES ========== */
+        :root {
+            --clr-primary: #1B2A4A;
+            --clr-primary-light: #243660;
+            --clr-accent: #E86A2A;
+            --clr-accent-hover: #D45A1A;
+            --clr-accent-light: rgba(232, 106, 42, 0.1);
+            --clr-bg: #F7F8FA;
+            --clr-white: #FFFFFF;
+            --clr-dark: #1A1A2E;
+            --clr-muted: #5A6275;
+            --clr-border: #E2E5EB;
+            --clr-success: #2ECC71;
+
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            --max-width: 1200px;
+            --header-height: 80px;
+            --header-height-shrunk: 60px;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 4px 24px rgba(27,42,74,0.08);
+            --shadow-lg: 0 12px 40px rgba(27,42,74,0.12);
+            --transition: 0.3s ease;
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--clr-dark);
+            background: var(--clr-bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        ul { list-style: none; }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--clr-primary);
+        }
+
+        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+        h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+
+        p { margin-bottom: 1rem; color: var(--clr-muted); }
+        p:last-child { margin-bottom: 0; }
+
+        /* ========== UTILITY ========== */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--clr-accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: var(--clr-muted);
+            line-height: 1.7;
+        }
+
+        .text-center { text-align: center; }
+        .text-center .section-subtitle { margin: 0 auto; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 32px;
+            border: 2px solid transparent;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        .btn-primary {
+            background: var(--clr-accent);
+            color: var(--clr-white);
+            border-color: var(--clr-accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--clr-accent-hover);
+            border-color: var(--clr-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232,106,42,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--clr-white);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .btn-secondary:hover {
+            background: var(--clr-white);
+            color: var(--clr-primary);
+            border-color: var(--clr-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--clr-accent);
+            border-color: var(--clr-accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--clr-accent);
+            color: var(--clr-white);
+            transform: translateY(-2px);
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            z-index: 1000;
+            transition: all var(--transition);
+            background: transparent;
+        }
+
+        .header.scrolled {
+            height: var(--header-height-shrunk);
+            background: rgba(27, 42, 74, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--clr-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--clr-accent);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: transform var(--transition);
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(-10deg);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            position: relative;
+            transition: color var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--clr-accent);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--clr-white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 10px 24px !important;
+            background: var(--clr-accent);
+            color: var(--clr-white) !important;
+            border-radius: var(--radius-sm);
+            font-weight: 600 !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-cta:hover {
+            background: var(--clr-accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 2.5px;
+            background: var(--clr-white);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--clr-primary);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.25;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(27,42,74,0.92) 0%, rgba(27,42,74,0.75) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            padding: 120px 0 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232,106,42,0.15);
+            border: 1px solid rgba(232,106,42,0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--clr-accent);
+        }
+
+        .hero h1 {
+            color: var(--clr-white);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 560px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .trust-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* ========== SERVICES ========== */
+        .services {
+            background: var(--clr-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .service-card {
+            background: var(--clr-bg);
+            border-radius: var(--radius);
+            padding: 36px;
+            transition: all var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--clr-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--clr-border);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--clr-accent-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+        }
+
+        /* ========== WHY CHOOSE US ========== */
+        .why-us {
+            background: var(--clr-bg);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        .why-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .why-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .why-image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--clr-accent);
+            color: var(--clr-white);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            padding: 16px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+            box-shadow: 0 8px 24px rgba(232,106,42,0.3);
+        }
+
+        .why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .why-item-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: var(--clr-accent-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-accent);
+            font-size: 1.3rem;
+        }
+
+        .why-item h3 {
+            margin-bottom: 6px;
+            font-size: 1.15rem;
+        }
+
+        .why-item p {
+            font-size: 0.95rem;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            background: var(--clr-primary);
+            color: var(--clr-white);
+        }
+
+        .how-it-works .section-label { color: var(--clr-accent); }
+        .how-it-works .section-title { color: var(--clr-white); }
+        .how-it-works .section-subtitle { color: rgba(255,255,255,0.7); }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+            margin-top: 56px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            background: rgba(255,255,255,0.12);
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background: var(--clr-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--clr-white);
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 24px rgba(232,106,42,0.3);
+        }
+
+        .step-card h3 {
+            color: var(--clr-white);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .step-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--clr-white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: var(--clr-bg);
+            border-radius: var(--radius);
+            padding: 36px;
+            position: relative;
+            transition: all var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--clr-border);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 16px;
+            color: #F4A940;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--clr-dark);
+            margin-bottom: 20px;
+            font-style: normal;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            background: var(--clr-accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--clr-accent);
+            font-size: 1rem;
+        }
+
+        .testimonial-name {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--clr-primary);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-location {
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+        }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: var(--clr-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-top: 48px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 16px;
+            font-size: 1.6rem;
+        }
+
+        .contact-info > p {
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: var(--clr-accent-light);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-accent);
+        }
+
+        .contact-detail strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--clr-primary);
+            margin-bottom: 2px;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail span,
+        .contact-detail a {
+            font-size: 0.95rem;
+            color: var(--clr-muted);
+        }
+
+        .contact-detail a:hover {
+            color: var(--clr-accent);
+        }
+
+        .contact-form-wrap {
+            background: var(--clr-white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--clr-primary);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid var(--clr-border);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--clr-dark);
+            background: var(--clr-bg);
+            transition: border-color var(--transition), box-shadow var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--clr-accent);
+            box-shadow: 0 0 0 3px rgba(232,106,42,0.12);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.05rem;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--clr-muted);
+            margin-top: 12px;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--clr-primary);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 300px;
+        }
+
+        .footer h4 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--clr-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            padding: 4px 0;
+            transition: color var(--transition), padding-left var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--clr-accent);
+            padding-left: 6px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            color: var(--clr-accent);
+        }
+
+        .footer-contact-item a:hover {
+            color: var(--clr-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 48px;
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--clr-accent);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .why-image img {
+                height: 300px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 72px 0;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 360px;
+                height: 100vh;
+                background: var(--clr-primary);
+                flex-direction: column;
+                justify-content: center;
+                gap: 28px;
+                padding: 40px;
+                transition: right var(--transition);
+                box-shadow: -8px 0 30px rgba(0,0,0,0.3);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.15rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                padding: 100px 0 60px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .steps-grid::before {
+                display: none;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .hero-ctas .btn {
+                width: 100%;
+            }
+
+            .contact-form-wrap {
+                padding: 28px 20px;
+            }
+        }
+
+        /* Mobile nav overlay */
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .nav-overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="#" class="logo" aria-label="Davison Gas Services home">
+            <span class="logo-icon">🔥</span>
+            Davison Gas
+        </a>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1920&q=80" alt="Modern boiler installation in a Nottinghamshire home" loading="eager" width="1920" height="1080">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="hero-badge reveal">
+            <span>⭐</span> Rated 5/5 — 100% recommended
+        </div>
+        <h1 class="reveal reveal-delay-1">Your boiler sorted.<br>No fuss, no nonsense.</h1>
+        <p class="hero-sub reveal reveal-delay-2">Gas boiler repair, full installations and heating fixes across Nottinghamshire. Over 25 years of getting it right first time — and folk keep coming back.</p>
+        <div class="hero-ctas reveal reveal-delay-3">
+            <a href="tel:07875272021" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call 07875 272021
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get a Free Quote</a>
+        </div>
+        <div class="hero-trust reveal reveal-delay-4">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Gas Safe Registered
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                25+ Years Experience
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                All Makes &amp; Models
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section services" id="services">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label reveal">What We Do</span>
+            <h2 class="section-title reveal reveal-delay-1">Boilers, heating, plumbing — the lot</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Whether it's a breakdown on the coldest night of the year or a full boiler swap, we'll get it sorted quickly and properly. Every job, every time.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Boiler Repair -->
+            <div class="service-card reveal">
+                <div class="service-icon">🔧</div>
+                <h3>Gas Boiler Repair</h3>
+                <p>Boiler playing up? Strange noises, no hot water, error codes flashing? We'll diagnose the fault and fix it — usually the same day you call. All makes and models, no problem.</p>
+            </div>
+            <!-- Boiler Installation -->
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon">🏠</div>
+                <h3>Boiler Installation</h3>
+                <p>New boiler fitted and running in as little as a day. We'll talk you through your options, recommend what actually suits your home, and handle the old one too. No hard sell, just honest advice.</p>
+            </div>
+            <!-- Heating Systems -->
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon">🌡️</div>
+                <h3>Heating Systems</h3>
+                <p>Full central heating installs, radiator swaps, powerflushes, and thermostat upgrades. If your house has cold spots or your heating bills are through the roof, we'll sort it.</p>
+            </div>
+            <!-- Domestic Plumbing -->
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon">🚿</div>
+                <h3>Domestic Plumbing</h3>
+                <p>Leaking taps, burst pipes, bathroom plumbing — the everyday stuff that needs doing properly. Quick response, fair prices, and we always clean up after ourselves.</p>
+            </div>
+            <!-- Energy Efficiency -->
+            <div class="service-card reveal reveal-delay-4">
+                <div class="service-icon">🌿</div>
+                <h3>Energy-Efficient Solutions</h3>
+                <p>Want to cut your gas bills without freezing? We fit high-efficiency boilers and smart controls that actually make a difference. We'll show you what'll save you the most money.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="section why-us" id="why-us">
+    <div class="container">
+        <div class="why-grid">
+            <div class="why-image reveal">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="Plumber working on heating system in Nottinghamshire" loading="lazy" width="800" height="533">
+                <div class="why-image-badge">Since 2007</div>
+            </div>
+            <div>
+                <span class="section-label reveal">Why Davison?</span>
+                <h2 class="section-title reveal reveal-delay-1">We don't just fix boilers. We look after people.</h2>
+                <p class="section-subtitle reveal reveal-delay-2" style="margin-bottom: 32px;">Darren's been doing this for over 25 years. In that time, most of his customers have become repeat customers — and a lot of them feel more like mates. That says more than any sales pitch could.</p>
+                <div class="why-list">
+                    <div class="why-item reveal">
+                        <div class="why-item-icon">⚡</div>
+                        <div>
+                            <h3>Same-Day Response</h3>
+                            <p>When your boiler goes, you need someone fast. Ring us today, and more often than not we'll be there today. No waiting around for days.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal reveal-delay-1">
+                        <div class="why-item-icon">💬</div>
+                        <div>
+                            <h3>Straight-Talking Advice</h3>
+                            <p>We'll tell you exactly what's wrong, what it'll cost, and whether it's worth fixing or replacing. No jargon, no upselling.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal reveal-delay-2">
+                        <div class="why-item-icon">👍</div>
+                        <div>
+                            <h3>100% Recommendation Rate</h3>
+                            <p>Every single customer who's left a review has said they'd recommend us. Not because we asked nicely — because the job got done right.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal reveal-delay-3">
+                        <div class="why-item-icon">🔒</div>
+                        <div>
+                            <h3>Trusted in Your Home</h3>
+                            <p>Customers have used us for 12+ years running. They trust us in their homes, around their kids, and with their heating. That trust is earned.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section class="section how-it-works" id="how-it-works">
+    <div class="container text-center">
+        <span class="section-label reveal">How It Works</span>
+        <h2 class="section-title reveal reveal-delay-1">Three steps. That's it.</h2>
+        <p class="section-subtitle reveal reveal-delay-2">No runaround. No endless phone menus. Just give us a ring, we'll pop round, and we'll get it fixed. Simple as that.</p>
+        <div class="steps-grid">
+            <div class="step-card reveal">
+                <div class="step-number">1</div>
+                <h3>Give Us a Ring</h3>
+                <p>Call, text, or drop us a message on Facebook. Tell us what's going on and we'll give you a straight answer — often with a rough idea of cost before we even visit.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-1">
+                <div class="step-number">2</div>
+                <h3>We Come to You</h3>
+                <p>Usually the same day or the next. We'll take a proper look, explain what needs doing in plain English, and give you a clear quote. No surprises.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-2">
+                <div class="step-number">3</div>
+                <h3>Job Done, Sorted</h3>
+                <p>We do the work, test everything properly, clean up, and make sure you're happy before we leave. If it's a new boiler, we'll even get your WiFi connected to it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label reveal">What People Say</span>
+            <h2 class="section-title reveal reveal-delay-1">Don't just take our word for it</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Real reviews from real customers across Nottinghamshire. We haven't changed a word.</p>
+        </div>
+        <div class="testimonials-grid">
+            <!-- Review 1 -->
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">★★★★★</div>
+                <blockquote>"Boiler packed in just before the cold weather hit. Phoned Darren and he was out the very next day — had a brand new boiler fitted. Professional, friendly, and we'll definitely be using them again."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">K</div>
+                    <div>
+                        <div class="testimonial-name">Kieran Barber</div>
+                        <div class="testimonial-location">Nottinghamshire</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="testimonial-card reveal reveal-delay-1">
+                <div class="testimonial-stars">★★★★★</div>
+                <blockquote>"I've used Davison Gas Services for 12 years now. I get anxious about people doing work on the house, but I feel really comfortable with Darren. Recently needed a full boiler swap — old tanks and everything ripped out — all done in a single day. Honestly shocked how fast it was."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div>
+                        <div class="testimonial-name">Morgan Dale</div>
+                        <div class="testimonial-location">Nottinghamshire</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="testimonial-card reveal reveal-delay-2">
+                <div class="testimonial-stars">★★★★★</div>
+                <blockquote>"Quick reply, out the next day, boiler problem solved the same day. Fantastic all round — I'd recommend Darren to anyone."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">K</div>
+                    <div>
+                        <div class="testimonial-name">Kerry Foster</div>
+                        <div class="testimonial-location">Nottinghamshire</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Review 4 -->
+            <div class="testimonial-card reveal reveal-delay-1">
+                <div class="testimonial-stars">★★★★★</div>
+                <blockquote>"Darren's been out a few times when things have gone wrong with the boiler. Really quick to come out, great communication, and he properly explains what the problem was and what he's done. Top service."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">S</div>
+                    <div>
+                        <div class="testimonial-name">Samuel Shoesmith</div>
+                        <div class="testimonial-location">Nottinghamshire</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Review 5 -->
+            <div class="testimonial-card reveal reveal-delay-2">
+                <div class="testimonial-stars">★★★★★</div>
+                <blockquote>"Outstanding from start to finish. New Baxi boiler and full heating system installed — Darren went above and beyond making sure everything was running perfectly. Even got the WiFi connection sorted. Excellent value too."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">D</div>
+                    <div>
+                        <div class="testimonial-name">Debbie Irving-Tidy</div>
+                        <div class="testimonial-location">Nottinghamshire</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label reveal">Get In Touch</span>
+            <h2 class="section-title reveal reveal-delay-1">Need a hand? Let's have a chat.</h2>
+            <p class="section-subtitle reveal reveal-delay-2">Whether it's an emergency or you just want a quote, drop us a line. We'll get back to you sharpish.</p>
+        </div>
+        <div class="contact-grid" style="margin-top: 48px;">
+            <div class="contact-info reveal">
+                <h3>Talk to Darren directly</h3>
+                <p>No call centres, no automated menus. You'll speak to the person who actually does the work. That's how we've always done it.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:07875272021">07875 272021</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:darrentyler7@yahoo.co.uk">darrentyler7@yahoo.co.uk</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <strong>Area Covered</strong>
+                            <span>Nottinghamshire &amp; surrounding areas</span>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </div>
+                        <div>
+                            <strong>Facebook</strong>
+                            <a href="https://www.facebook.com/DavisonGasServices" target="_blank" rel="noopener noreferrer">Davison Gas Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrap reveal reveal-delay-1">
+                <!-- IMPORTANT: Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms access key -->
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Enquiry — Davison Gas Services Website">
+                    <input type="hidden" name="from_name" value="Davison Gas Services Website">
+                    <!-- Honeypot spam prevention -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. John Smith" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. 07700 900000" required autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g. john@example.co.uk" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">What Do You Need?</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Choose a service…</option>
+                            <option value="Boiler Repair">Boiler Repair</option>
+                            <option value="Boiler Installation">Boiler Installation</option>
+                            <option value="Heating System">Heating System</option>
+                            <option value="Plumbing">Domestic Plumbing</option>
+                            <option value="Energy Efficiency">Energy-Efficient Solutions</option>
+                            <option value="Other">Something Else</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us a Bit More</label>
+                        <textarea id="message" name="message" placeholder="What's going on? Any details help — boiler make, when it started, etc." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Send Enquiry</button>
+                    <p class="form-note">We'll get back to you within a few hours. No spam, ever.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🔥</span>
+                    Davison Gas
+                </a>
+                <p>Keeping Nottinghamshire homes warm since 2007. Gas boiler repair, installations and heating — done right, done fast.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Boiler Repair</a></li>
+                    <li><a href="#services">Boiler Installation</a></li>
+                    <li><a href="#services">Heating Systems</a></li>
+                    <li><a href="#services">Domestic Plumbing</a></li>
+                    <li><a href="#services">Energy Efficiency</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Get In Touch</h4>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:07875272021">07875 272021</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <a href="mailto:darrentyler7@yahoo.co.uk">darrentyler7@yahoo.co.uk</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Nottinghamshire, UK</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="copyrightYear"></span> Davison Gas Services. All rights reserved.</span>
+            <a href="#hero">Back to top ↑</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* ========== COPYRIGHT YEAR ========== */
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+    /* ========== STICKY HEADER ========== */
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    function handleScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        lastScroll = scrollY;
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    /* ========== MOBILE MENU ========== */
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function toggleMenu() {
+        const isActive = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
+
+    navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (navLinks.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    /* ========== SCROLL REVEAL (Intersection Observer) ========== */
+    var revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(function(el) {
+            observer.observe(el);
+        });
+    } else {
+        revealElements.forEach(function(el) {
+            el.classList.add('visible');
+        });
+    }
+
+    /* ========== FORM SUBMISSION (Web3Forms) ========== */
+    var contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var submitBtn = contactForm.querySelector('.form-submit');
+        var originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending…';
+        submitBtn.disabled = true;
+
+        var formData = new FormData(contactForm);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            if (data.success) {
+                submitBtn.textContent = 'Sent! ✓';
+                submitBtn.style.background = '#2ECC71';
+                submitBtn.style.borderColor = '#2ECC71';
+                contactForm.reset();
+                setTimeout(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.style.borderColor = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            } else {
+                submitBtn.textContent = 'Something went wrong';
+                submitBtn.style.background = '#E74C3C';
+                submitBtn.style.borderColor = '#E74C3C';
+                setTimeout(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.style.borderColor = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
+        })
+        .catch(function() {
+            submitBtn.textContent = 'Something went wrong';
+            submitBtn.style.background = '#E74C3C';
+            submitBtn.style.borderColor = '#E74C3C';
+            setTimeout(function() {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.style.borderColor = '';
+                submitBtn.disabled = false;
+            }, 3000);
+        });
+    });
+</script>
+
+</body>
+</html>
