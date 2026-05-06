@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-Sitemap: https://www.davisongasservices.co.uk/sitemap.xml
+Sitemap: https://davisongasservices.co.uk/sitemap.xml

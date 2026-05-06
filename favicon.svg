@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Orange circle background -->
+  <circle cx="32" cy="32" r="32" fill="#F97316"/>
+  <!-- Flame shape in white -->
+  <path d="M32 10
+    C32 10 20 22 20 34
+    C20 40.5 24 45 28 46.5
+    C27 43 28 40 30 38
+    C30 42 32 45 32 48
+    C32 45 34 42 34 38
+    C36 40 37 43 36 46.5
+    C40 45 44 40.5 44 34
+    C44 22 32 10 32 10Z"
+    fill="white"/>
+</svg>
