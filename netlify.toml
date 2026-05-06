@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://www.davisongasservices.co.uk/*"
+  to = "https://davisongasservices.co.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://davisongasservices.co.uk/*"
+  to = "https://davisongasservices.co.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.davisongasservices.co.uk/*"
+  to = "https://davisongasservices.co.uk/:splat"
+  status = 301
+  force = true
