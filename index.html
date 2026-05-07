@@ -263,6 +263,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
   <!-- role="banner" is the landmark for the primary site header -->
@@ -297,30 +298,59 @@
           <p class="hero-sub">Fast response, honest pricing, tidy work and clear advice from a local boiler engineer in Nottingham homeowners are happy to call back.</p>
           <div class="hero-buttons">
             <a href="contact.html" class="btn btn-orange">Request a Free Quote</a>
-            <a href="tel:+447875272021" class="btn btn-outline-white">Call Now</a>
+            <a href="services.html#our-work" class="btn btn-outline-white">See Our Work</a>
           </div>
           <div class="hero-badges">
-            <span class="badge"><span class="badge-check" aria-hidden="true">&#10003;</span> Verified Gas Safe Engineer</span>
-            <span class="badge"><span class="badge-check" aria-hidden="true">&#10003;</span> Same Day Response</span>
-            <span class="badge"><span class="badge-check" aria-hidden="true">&#10003;</span> 5-Star Rated</span>
-            <span class="badge"><span class="badge-check" aria-hidden="true">&#10003;</span> Out of Hours Available</span>
+            <span class="badge"><span class="badge-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Verified Gas Safe Engineer</span>
+            <span class="badge"><span class="badge-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Same Day Response</span>
+            <span class="badge"><span class="badge-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> 5-Star Rated</span>
+            <span class="badge"><span class="badge-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span> Out of Hours Available</span>
           </div>
         </div>
         <div class="hero-right" aria-label="Engineer profile card">
           <div class="hero-card">
-            <div class="hero-card-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"><path d="M24 4C24 4 14 16 14 26C14 31.523 18.477 36 24 36C29.523 36 34 31.523 34 26C34 16 24 4Z" fill="#f97316"/><path d="M24 18C24 18 19 24 19 28C19 30.761 21.239 33 24 33C26.761 33 29 30.761 29 28C29 24 24 18 24 18Z" fill="#ffffff" opacity="0.4"/></svg>
+            <div class="hero-card-imgwrap">
+              <img
+                src="images/image3.webp"
+                alt="Darren Davison, Gas Safe verified boiler and gas engineer in Nottingham, pictured on site at a customer's property"
+                class="hero-card-img"
+                width="480" height="220"
+                loading="eager"
+                fetchpriority="high">
             </div>
-            <!-- p not h3 — decorative card label, not a section heading; avoids skipping h2 level -->
-            <p class="hero-card-name">Darren Davison</p>
-            <p class="hero-card-title">Gas &amp; Boiler Engineer</p>
-            <div class="hero-card-stars" aria-label="Five star rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-            <p class="hero-card-review">"Highly professional - sorted our boiler same day!"</p>
-            <span class="hero-card-badge">Available Today - Call Now</span>
+            <div class="hero-card-body">
+              <p class="hero-card-name">Darren Davison</p>
+              <p class="hero-card-title">Gas &amp; Boiler Engineer</p>
+              <div class="hero-card-stars" aria-label="Five star rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+              <p class="hero-card-review">"Highly professional - sorted our boiler same day!"</p>
+              <a href="tel:+447875272021" class="hero-card-call-btn"><i class="fa-solid fa-phone"></i> Call Darren Now</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Trust stats strip -->
+    <div class="stats-strip" aria-label="Trust signals">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">5<i class="fa-solid fa-star" aria-hidden="true"></i></span>
+          <span class="stat-label">Google Rated</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Same Day</span>
+          <span class="stat-label">Response Available</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Gas Safe</span>
+          <span class="stat-label">Verified Engineer</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Local</span>
+          <span class="stat-label">Nottingham Based</span>
+        </div>
+      </div>
+    </div>
 
     <section class="services-section section" id="services" aria-labelledby="services-title">
       <div class="container">
@@ -328,30 +358,43 @@
         <p class="section-subtitle">Gas boiler installations, gas boiler and cooker repairs, gas fire servicing, plumbing repair and landlords certificates in Nottingham.</p>
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">&#9881;</div>
+            <span class="service-tag">Installation</span>
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-gear"></i></div>
             <h3>Gas Boiler Installations</h3>
-            <p>New gas boiler installations in Nottingham, including fitting, commissioning and handover.</p>
+            <p>New gas boiler installations in Nottingham, including supply, fitting, commissioning and full handover.</p>
+            <a href="services.html" class="service-link">Learn more <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">&#128295;</div>
+            <span class="service-tag">Repairs</span>
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-wrench"></i></div>
             <h3>Gas Boiler &amp; Cooker Repairs</h3>
-            <p>Fault finding and repairs for gas boilers and cookers across Nottingham.</p>
+            <p>Fault finding and repairs for gas boilers and cookers across Nottingham, with fast response where available.</p>
+            <a href="services.html" class="service-link">Learn more <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">&#128293;</div>
+            <span class="service-tag">Servicing</span>
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-fire"></i></div>
             <h3>Gas Fire Servicing</h3>
-            <p>Gas fire servicing to help keep your appliance safe, clean and working correctly.</p>
+            <p>Gas fire servicing to help keep your appliance safe, clean and working correctly all year round.</p>
+            <a href="services.html" class="service-link">Learn more <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">&#128688;</div>
+            <span class="service-tag">Plumbing</span>
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-faucet-drip"></i></div>
             <h3>Plumbing Repair</h3>
-            <p>Practical plumbing repair work for common household leaks, faults and fixes.</p>
+            <p>Practical plumbing repair work for common household leaks, faults and fixes carried out to a high standard.</p>
+            <a href="services.html" class="service-link">Learn more <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
           </article>
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">&#128196;</div>
+            <span class="service-tag">Certificates</span>
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-file-contract"></i></div>
             <h3>Landlords Certificates</h3>
-            <p>Landlords certificates for rental properties that need gas safety checks.</p>
+            <p>Annual gas safety certificates for landlords and rental properties, issued by a verified Gas Safe engineer (Corgi).</p>
+            <a href="services.html" class="service-link">Learn more <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span></a>
           </article>
+        </div>
+        <div class="services-cta">
+          <a href="services.html" class="btn btn-orange">View All Services</a>
         </div>
       </div>
     </section>
@@ -362,25 +405,50 @@
         <p class="section-subtitle">The strongest trust signal here is simple: people mention the same things again and again.</p>
         <div class="why-grid">
           <div class="why-item">
-            <div class="why-icon" aria-hidden="true">&#9201;</div>
+            <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-stopwatch"></i></div>
             <h3>Fast Response</h3>
             <p>Often same day or next day, with clear communication before arrival.</p>
           </div>
           <div class="why-item">
-            <div class="why-icon" aria-hidden="true">&#10003;</div>
+            <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-comment-dots"></i></div>
             <h3>Straight Advice</h3>
             <p>Problems are explained in plain English before work goes ahead.</p>
           </div>
           <div class="why-item">
-            <div class="why-icon" aria-hidden="true">&#128161;</div>
+            <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></div>
             <h3>Prepared Work</h3>
             <p>Repairs and installs are planned around what your home actually needs.</p>
           </div>
           <div class="why-item">
-            <div class="why-icon" aria-hidden="true">&#127969;</div>
+            <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></div>
             <h3>Tidy in Homes</h3>
             <p>Respectful work inside lived-in houses, including family homes.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-gallery-section" aria-label="Recent work in Nottingham">
+      <div class="container">
+        <div class="home-gallery-grid">
+          <figure class="home-gallery-figure">
+            <img
+              src="images/image5.webp"
+              alt="Completed Baxi 800 boiler installation in a Nottingham home by Davison Gas Services — tidy finish with Magna Clean filter fitted"
+              class="home-gallery-img"
+              width="700" height="380"
+              loading="lazy">
+            <figcaption>Baxi 800 installation — ready and commissioned</figcaption>
+          </figure>
+          <figure class="home-gallery-figure">
+            <img
+              src="images/image6.webp"
+              alt="Davison Gas Services van with Baxi branding parked outside a Nottingham property ready for a boiler installation"
+              class="home-gallery-img"
+              width="700" height="380"
+              loading="lazy">
+            <figcaption>On site and ready across Nottingham</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -391,17 +459,17 @@
         <p class="section-subtitle">Real feedback from Nottingham customers who needed boiler and heating help.</p>
         <div class="reviews-grid">
           <article class="review-card">
-            <div class="review-stars" aria-label="Five star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-stars" aria-label="Five star rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
             <p class="review-body">I would highly recommend Darren, quick reply, out the next day, boiler problem solved the same day! Fantastic all round.</p>
             <h3 class="review-name">James</h3>
           </article>
           <article class="review-card">
-            <div class="review-stars" aria-label="Five star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-stars" aria-label="Five star rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
             <p class="review-body">Darren explains what the problem was and what he has done. Recommend! Top service. Thank you.</p>
             <h3 class="review-name">Michael</h3>
           </article>
           <article class="review-card">
-            <div class="review-stars" aria-label="Five star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="review-stars" aria-label="Five star rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
             <p class="review-body">Friendly, professional, and excellent value - highly recommended!</p>
             <h3 class="review-name">Sarah</h3>
           </article>
@@ -433,7 +501,7 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
               Is Darren Davison a verified Gas Safe engineer (Corgi)?
-              <span class="faq-arrow" aria-hidden="true">&#9660;</span>
+              <span class="faq-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer" id="faq-answer-1">
               <p>Yes. Davison Gas Services is run by a verified Gas Safe engineer (Corgi), meaning gas work is carried out safely, legally, and to the required standard.</p>
@@ -443,7 +511,7 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
               Do you offer gas boiler and cooker repairs in Nottingham?
-              <span class="faq-arrow" aria-hidden="true">&#9660;</span>
+              <span class="faq-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer" id="faq-answer-2">
               <p>Yes. Davison Gas Services offers gas boiler and cooker repairs across Nottingham, with fast response where available.</p>
@@ -453,7 +521,7 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
               Do you provide landlords certificates?
-              <span class="faq-arrow" aria-hidden="true">&#9660;</span>
+              <span class="faq-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer" id="faq-answer-3">
               <p>Yes. Davison Gas Services provides landlords certificates for rental properties that need gas safety checks.</p>
@@ -463,7 +531,7 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
               What areas do you cover?
-              <span class="faq-arrow" aria-hidden="true">&#9660;</span>
+              <span class="faq-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer" id="faq-answer-4">
               <p>Davison Gas Services covers Nottingham and the wider Nottinghamshire area.</p>
@@ -473,7 +541,7 @@
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
               How much does gas or plumbing work cost in Nottingham?
-              <span class="faq-arrow" aria-hidden="true">&#9660;</span>
+              <span class="faq-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             <div class="faq-answer" id="faq-answer-5">
               <p>Contact Davison Gas Services directly for an honest, transparent quote. Darren provides upfront pricing with no hidden fees.</p>
